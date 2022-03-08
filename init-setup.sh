@@ -21,8 +21,11 @@ sudo apt-get install git
 # Docker
 echo -e "Docker 🐳"
 sleep 2s
+echo "sudo apt-get remove docker docker-engine docker.io containerd runc"
 sudo apt-get remove docker docker-engine docker.io containerd runc
+echo "apt-get update"
 sudo apt-get update
+echo "sudo apt-get install"
 sudo apt-get install \
     ca-certificates \
     curl \
@@ -34,8 +37,10 @@ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
+echo "apt-get update"
 sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+echo "sudo apt-get install docker-ce docker-ce-cli containerd.io docker.io"
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker.io
 sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo systemctl enable docker
