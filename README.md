@@ -1,6 +1,9 @@
 # Stater Environment Linux Dev
 A small script code in .sh to install the default programs that i use often.
 
+Giver permissions: `sudo chmod +x init-setup.sh`  
+Execute: `./init-setup.sh <password>`
+
 1. Snap 🐦
 2. Git 👨‍💻
 3. Docker 🐳

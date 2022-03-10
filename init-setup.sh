@@ -1,7 +1,12 @@
 #!/bin/bash
 
 # Set your password here
-PASSWORD="********"
+PASSWORD=$1
+
+if [ -z "$PASSWORD" ]; then
+  echo "Please provide a password"
+  exit 1
+fi
 
 echo "💻 Setting up the environment..."
 sleep 2s
