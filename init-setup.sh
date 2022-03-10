@@ -13,6 +13,11 @@ echo $PASSWORD | sudo -S apt-get update
 echo $PASSWORD | sudo -S apt-get upgrade
 echo "✔️ System updated successfully!"
 
+# Snap
+echo "Snap 🐦"
+sleep 2s
+sudo apt install snapd
+
 # Git
 echo -e "Git 👨‍💻"
 sleep 2s
@@ -49,7 +54,7 @@ sudo chmod +x /usr/bin/docker-compose
 # Google Chrome
 echo -e "🔎 Installing Google Chrome..."
 sleep 2s
-sudo apt-get install libxss1 libappindicator1 libindicator7
+yes | sudo apt-get install libxss1 libappindicator1 libindicator7
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 rm -rf google-chrome-stable_current_amd64.deb
@@ -62,11 +67,8 @@ sudo snap install --classic code
 # Android Studio
 echo -e "📱 Installing Android Studio..."
 sleep 2s
-sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
-wget https://dl.google.com/dl/android/studio/ide-zips/
-unzip android-studio-ide-173.4859392-linux.zip
-sudo mv android-studio /opt/
-sudo ln -s /opt/android-studio/bin/studio.sh /usr/bin/studio
+yes | sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+sudo snap install android-studio --classic
  
 # Postman
 echo -e "📦 Installing Postman..."
