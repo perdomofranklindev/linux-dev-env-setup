@@ -15,3 +15,7 @@ Execute: `./init-setup.sh <password>`
 10. [NGROK 🔗](https://ngrok.com/)
 11. [Slack 🎙](https://slack.com/)
 12. [Discord 💬](https://discord.com/)
+
+## Tested Linux Distribution
+
+- Ubuntu 20.04
