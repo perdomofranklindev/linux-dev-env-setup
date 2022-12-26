@@ -65,44 +65,28 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sud
 sudo apt-get update 
 sudo apt-get install google-chrome-stable
 
-# wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O /tmp/google.pub
-# gpg --no-default-keyring --keyring /etc/apt/keyrings/google-chrome.gpg --import /tmp/google.pub
-# echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-# sudo apt-get update
-# sudo apt-get install google-chrome-stable
-
-# # Visual Studio Code
-# echo -e "💻 Installing Visual Studio Code..."
-# sleep 2s
-# sudo snap install --classic code
+# Visual Studio Code
+echo -e "💻 Installing Visual Studio Code..."
+sleep 2s
+sudo snap install --classic code
  
-# # Android Studio
-# echo -e "📱 Installing Android Studio..."
-# sleep 2s
-# yes | sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
-# sudo snap install android-studio --classic
+# Android Studio
+echo -e "📱 Installing Android Studio..."
+sleep 2s
+yes | sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+sudo snap install android-studio --classic
 
-# # Spotify
-# echo -e "🎧 Installing Spotify..."
-# sleep 2s
-# sudo snap install spotify
+# Spotify
+echo -e "🎧 Installing Spotify..."
+sleep 2s
+sudo snap install spotify
 
-# # NGROK
-# echo -e "🔗 Installing NGROK..."
-# sleep 2s
-# sudo apt-get install zip unzip
-# sudo wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-# sudo unzip ngrok-stable-linux-amd64.zip
-# sudo chmod +x ngrok
-# sudo mv ngrok /usr/bin/
-# rm -rf ngrok-stable-linux-amd64.zip
+# Slack
+echo -e "🎙 Installing Slack..."
+sleep 2s
+sudo snap install slack --classic
 
-# # Slack
-# echo -e "🎙 Installing Slack..."
-# sleep 2s
-# sudo snap install slack --classic
-
-# # Discord
-# echo -e "💬 Installing Discord..."
-# sleep 2s
-# sudo snap install discord
+# Discord
+echo -e "💬 Installing Discord..."
+sleep 2s
+sudo snap install discord
