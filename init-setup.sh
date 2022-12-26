@@ -42,9 +42,9 @@ sudo apt-get install \
 
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg 
-# echo $PASSWORD | sudo rm -rf /etc/apt/keyrings/docker.gpg
-sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-
+if [ -f /etc/apt/keyrings/docker.gpg -ne 0 ]; then
+  sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+if
 
 # echo \
 #   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
