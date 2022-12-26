@@ -31,13 +31,13 @@ sudo apt-get install git
 # Docker
 echo -e "Docker 🐳"
 sleep 2s
-sudo apt-get remove docker docker-engine docker.io containerd runc
-sudo apt-get update
-sudo apt-get install \
-    ca-certificates \
-    curl \
-    gnupg \
-    lsb-release
+yes | sudo apt-get remove docker docker-engine docker.io containerd runc
+yes | sudo apt-get update
+yes | sudo apt-get install \
+           ca-certificates \
+           curl \
+           gnupg \
+           lsb-release
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo \
@@ -45,7 +45,7 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 echo $PASSWORD | sudo -S apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker.io
+yes | sudo apt-get install docker-ce docker-ce-cli containerd.io docker.io
 sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo systemctl enable docker
