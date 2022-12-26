@@ -3,19 +3,19 @@
 # Set your password here
 PASSWORD=$1
 
-# if [ -z "$PASSWORD" ]; then
-#   echo "Please provide a password"
-#   exit 1
-# fi
+if [ -z "$PASSWORD" ]; then
+  echo "Please provide a password"
+  exit 1
+fi
 
-# echo "💻 Setting up the environment..."
+echo "💻 Setting up the environment..."
 
-# # Update system
-# echo "🔄 Updating system..."
-# sleep 2s
-# echo $PASSWORD | sudo -S apt-get update
-# echo $PASSWORD | sudo -S apt-get upgrade
-# echo "✔️ System updated successfully!"
+# Update system
+echo "🔄 Updating system..."
+sleep 2s
+echo $PASSWORD | sudo -S apt-get update
+echo $PASSWORD | sudo -S apt-get upgrade
+echo "✔️ System updated successfully!"
 
 # # Snap
 # echo "Snap 🐦"
