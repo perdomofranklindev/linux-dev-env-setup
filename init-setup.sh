@@ -32,12 +32,12 @@ sleep 2s
 echo -e "Docker 🐳"
 sleep 2s
 yes | sudo apt-get remove docker docker-engine docker.io containerd runc
-# yes | sudo apt-get update
-# yes | sudo apt-get install \
-#            ca-certificates \
-#            curl \
-#            gnupg \
-#            lsb-release
+yes | sudo apt-get update
+yes | sudo apt-get install \
+           ca-certificates \
+           curl \
+           gnupg \
+           lsb-release
 
 # curl -fsSL https://download.docker.com/linux/ubuntu/gpg 
 # yes | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
