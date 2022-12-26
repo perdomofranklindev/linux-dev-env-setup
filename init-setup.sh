@@ -40,8 +40,8 @@ yes | apt-cache policy docker-ce
 yes | sudo apt install docker-ce
 
 sudo groupadd docker
-sudo usermod -aG docker $USER
-sudo systemctl enable docker
+sudo usermod -aG docker ${USER}
+su -s ${USER}
 
 # # Docker Compose.
 # echo -e "Docker Compose 🐳"
