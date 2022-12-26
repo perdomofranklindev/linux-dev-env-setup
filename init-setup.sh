@@ -42,12 +42,12 @@ sudo apt-get install \
 
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg 
-if [ -f /etc/apt/keyrings/docker.gpg ]; then
-  # sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-  echo "file exists"
-else
-  echo "no exists"
-if
+# if [ -f /etc/apt/keyrings/docker.gpg ]; then
+#   # sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+#   echo "file exists"
+# else
+#   echo "no exists"
+# if
 
 # echo \
 #   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
