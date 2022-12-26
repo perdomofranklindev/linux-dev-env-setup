@@ -38,7 +38,6 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 yes | sudo apt update
 yes | apt-cache policy docker-ce
 yes | sudo apt install docker-ce
-sudo systemctl status docker
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
