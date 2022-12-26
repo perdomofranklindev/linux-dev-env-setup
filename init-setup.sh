@@ -18,43 +18,43 @@ echo $PASSWORD | sudo -S apt-get update
 echo $PASSWORD | sudo -S apt-get upgrade
 echo "✔️ System updated successfully!"
 
-# # Snap
-# echo "Snap 🐦"
-# sleep 2s
-# sudo apt install snapd
+# Snap
+echo "Snap 🐦"
+sleep 2s
+sudo apt install snapd
 
-# # Git
-# echo -e "Git 👨‍💻"
-# sleep 2s
-# sudo apt-get install git
+# Git
+echo -e "Git 👨‍💻"
+sleep 2s
+sudo apt-get install git
 
-# # Docker
-# echo -e "Docker 🐳"
-# sleep 2s
-# sudo apt-get remove docker docker-engine docker.io containerd runc
-# sudo apt-get update
-# sudo apt-get install \
-#     ca-certificates \
-#     curl \
-#     gnupg \
-#     lsb-release
+# Docker
+echo -e "Docker 🐳"
+sleep 2s
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get update
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
 
-# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-# echo \
-#   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-#   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-# echo $PASSWORD | sudo -S apt-get update
-# sudo apt-get install docker-ce docker-ce-cli containerd.io docker.io
-# sudo groupadd docker
-# sudo usermod -aG docker $USER
-# sudo systemctl enable docker
+echo $PASSWORD | sudo -S apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker.io
+sudo groupadd docker
+sudo usermod -aG docker $USER
+sudo systemctl enable docker
 
-# # Docker Compose.
-# echo -e "Docker Compose 🐳"
-# sleep 2s
-# sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
-# sudo chmod +x /usr/bin/docker-compose
+# Docker Compose.
+echo -e "Docker Compose 🐳"
+sleep 2s
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
+sudo chmod +x /usr/bin/docker-compose
 
 # # Google Chrome
 # echo -e "🔎 Installing Google Chrome..."
@@ -74,11 +74,6 @@ echo "✔️ System updated successfully!"
 # sleep 2s
 # yes | sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
 # sudo snap install android-studio --classic
- 
-# # Postman
-# echo -e "📦 Installing Postman..."
-# sleep 2s
-# sudo snap install postman
 
 # # Spotify
 # echo -e "🎧 Installing Spotify..."
