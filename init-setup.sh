@@ -40,7 +40,7 @@ sudo apt-get install \
     gnupg \
     lsb-release
 
-sudo mkdir -p /etc/apt/keyrings
+yes | sudo mkdir -p /etc/apt/keyrings
 yes | curl -fsSL https://download.docker.com/linux/ubuntu/gpg 
 yes | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
