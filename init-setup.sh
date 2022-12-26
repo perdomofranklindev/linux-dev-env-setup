@@ -39,7 +39,8 @@ yes | sudo apt-get install \
            gnupg \
            lsb-release
 
-yes | curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg 
+yes | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 yes | echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
@@ -59,11 +60,16 @@ sudo chmod +x /usr/bin/docker-compose
 # Google Chrome
 echo -e "🔎 Installing Google Chrome..."
 sleep 2s
-wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O /tmp/google.pub
-gpg --no-default-keyring --keyring /etc/apt/keyrings/google-chrome.gpg --import /tmp/google.pub
-echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-sudo apt-get update
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add 
+echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+sudo apt-get update 
 sudo apt-get install google-chrome-stable
+
+# wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O /tmp/google.pub
+# gpg --no-default-keyring --keyring /etc/apt/keyrings/google-chrome.gpg --import /tmp/google.pub
+# echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+# sudo apt-get update
+# sudo apt-get install google-chrome-stable
 
 # # Visual Studio Code
 # echo -e "💻 Installing Visual Studio Code..."
