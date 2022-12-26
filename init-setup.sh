@@ -41,8 +41,9 @@ sudo apt-get install \
     lsb-release
 
 sudo mkdir -p /etc/apt/keyrings
+rm -rf /etc/apt/keyrings/docker.gpg
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg 
-yes | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
 
 # echo \
