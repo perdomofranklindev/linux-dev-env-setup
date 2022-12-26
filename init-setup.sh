@@ -30,7 +30,6 @@ sleep 2s
 
 # Docker
 echo -e "Docker 🐳"
-sleep 2s
 
 sudo apt-get remove docker docker-engine docker.io containerd runc
 sudo apt-get update
@@ -41,7 +40,10 @@ sudo apt-get install \
     lsb-release
 
 sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg 
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg
+if ! [[ -f /etc/apt/keyrings/docker.gpg ]] then
+  sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+fi
 # if [ -f /etc/apt/keyrings/docker.gpg ]; then
 #   # sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 #   echo "file exists"
