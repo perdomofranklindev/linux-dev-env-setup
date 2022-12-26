@@ -31,7 +31,7 @@ sleep 2s
 # Docker
 echo -e "Docker 🐳"
 sleep 2s
-# yes | sudo apt-get remove docker docker-engine docker.io containerd runc
+yes | sudo apt-get remove docker docker-engine docker.io containerd runc
 # yes | sudo apt-get update
 # yes | sudo apt-get install \
 #            ca-certificates \
