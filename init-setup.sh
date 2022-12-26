@@ -39,9 +39,9 @@ yes | sudo apt update
 yes | apt-cache policy docker-ce
 yes | sudo apt install docker-ce
 
-sudo groupadd docker
-sudo usermod -aG docker ${USER}
-su -s ${USER}
+echo $PASSWORD | sudo groupadd docker
+echo $PASSWORD | sudo usermod -aG docker ${USER}
+echo $PASSWORD | su -s ${USER}
 
 # # Docker Compose.
 # echo -e "Docker Compose 🐳"
