@@ -11,7 +11,6 @@ Execute: `./init-setup.sh <password>`
 6. [Visual Studio Code 💻](https://code.visualstudio.com/)
 7. [Android Studio 📱](https://developer.android.com/studio?hl=es-419&gclid=Cj0KCQjw_7KXBhCoARIsAPdPTfjn_-ZwRMmDmv-MpvEYjZ5YkOECYQuR2JBV-MRVr0QPKTkLzxffGLEaAoUeEALw_wcB&gclsrc=aw.ds)
 8. [Spotify 🎧](https://www.spotify.com/)
-9.  [NGROK 🔗](https://ngrok.com/)
 10. [Slack 🎙](https://slack.com/)
 11. [Discord 💬](https://discord.com/)
 
