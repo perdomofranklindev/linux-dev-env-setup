@@ -22,7 +22,7 @@ sudo apt install snapd
 
 # Git
 echo -e "Git 👨‍💻"
-sudo apt-get install git
+yes | sudo apt-get install git
 
 # Docker
 echo -e "Docker 🐳"
