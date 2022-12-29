@@ -13,7 +13,8 @@ Execute: `./init-setup.sh <password>`
 8. [Spotify 🎧](https://www.spotify.com/)
 10. [Slack 🎙](https://slack.com/)
 11. [Discord 💬](https://discord.com/)
+12. [Fish terminal 🐟](https://fishshell.com/)
 
 ## Tested Linux Distribution
 
-- Ubuntu 20.04
+- Ubuntu 20.04, 22.10
