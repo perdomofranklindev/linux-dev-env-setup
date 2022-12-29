@@ -17,20 +17,23 @@ echo $PASSWORD | sudo -S apt-get upgrade
 echo "✔️ System updated successfully!"
 
 # Curl
-echo "Installing curl..."
+echo "Installing curl 🌐"
+sleep 2s
 sudo apt-get install curl
 
 # Snap
 echo "Snap 🐦"
+sleep 2s
 sudo apt install snapd
 
 # Git
 echo -e "Git 👨‍💻"
+sleep 2s
 yes | sudo apt-get install git
 
 # Docker
 echo -e "Docker 🐳"
-
+sleep 2s
 echo $PASSWORD | sudo snap install docker 
 echo $PASSWORD | sudo apt update
 echo $PASSWORD | sudo apt install apt-transport-https ca-certificates curl software-properties-common
@@ -95,26 +98,30 @@ sleep 2s
 sudo snap install discord
 
 # Fish terminal
-echo -e "Installing fish terminal..."
+echo -e "🐟 Fish Terminal"
+sleep 2s
 echo -ne '\n' | sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
 yes | sudo apt install fish
 
 # Fish as default terminal
-echo -e "configure the default terminal"
+echo -e "configure the default terminal 🔨"
+sleep 2s
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
 echo $PASSWORD | chsh -s $(which fish) # To revert => chsh -s $(which bash)
 
 # Fish Node Version Manager
-echo -e "Installing Node Version Manager"
+echo -e "Installing Node Version Manager 🍃"
+sleep 2s
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher install jorgebucaran/nvm.fish
 
 # Install Oh my fish
-echo -e "Installing Oh my fish"
+echo -e "Installing Oh my fish 🎨"
+sleep 2s
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > install
 fish install --path=~/.local/share/omf --config=~/.config/omf
 
-echo -e "\nYou can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
+echo -e "\n👌 You can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
 echo -e "It's super easy to use it!"
 echo -e "Please restart your system..."
