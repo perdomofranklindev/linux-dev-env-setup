@@ -110,6 +110,9 @@ fisher install jorgebucaran/nvm.fish
 # Install Oh my fish
 echo -e "Installing Oh my fish"
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > install
+fish install --path=~/.local/share/omf --config=~/.config/omf
 
-echo -e "\n You can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
+echo -e "\nYou can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
 echo -e "It's super easy to use it!"
+echo -e "Please restart your system..."
