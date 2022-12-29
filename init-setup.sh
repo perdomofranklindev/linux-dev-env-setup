@@ -92,24 +92,24 @@ echo "💻 Setting up the environment..."
 # sudo snap install discord
 
 # Fish terminal
-echo "Installing fish terminal..."
+echo -e "Installing fish terminal..."
 echo -ne '\n' | sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
 yes | sudo apt install fish
 
 # Fish as default terminal
-echo "configure the default terminal"
+echo -e "configure the default terminal"
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
 echo $PASSWORD | chsh -s $(which fish) # To revert => chsh -s $(which bash)
 
 # Fish Node Version Manager
-echo "Installing Node Version Manager"
+echo -e "Installing Node Version Manager"
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher install jorgebucaran/nvm.fish
 
 # Install Oh my fish
-echo "Installing Oh my fish"
+echo -e "Installing Oh my fish"
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
-echo "\n You can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
-echo "It's super easy to use it!"
+echo -e "\n You can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
+echo -e "It's super easy to use it!"
