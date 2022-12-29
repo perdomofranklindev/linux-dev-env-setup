@@ -109,7 +109,6 @@ fisher install jorgebucaran/nvm.fish
 
 # Install Oh my fish
 echo -e "Installing Oh my fish"
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > install
 fish install --path=~/.local/share/omf --config=~/.config/omf
 
