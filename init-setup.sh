@@ -125,3 +125,7 @@ fish install --path=~/.local/share/omf --config=~/.config/omf
 echo -e "\n👌 You can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
 echo -e "It's super easy to use it!"
 echo -e "Please restart your system..."
+
+# Insomnia
+echo -e "Insomnia 🌑"
+sudo snap install insomnia
