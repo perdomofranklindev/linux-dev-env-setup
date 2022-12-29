@@ -16,6 +16,10 @@ echo $PASSWORD | sudo -S apt-get update
 echo $PASSWORD | sudo -S apt-get upgrade
 echo "✔️ System updated successfully!"
 
+# Curl
+echo "Installing curl..."
+sudo apt-get install curl
+
 # # Snap
 # echo "Snap 🐦"
 # sudo apt install snapd
@@ -35,7 +39,6 @@ echo "✔️ System updated successfully!"
 # sudo apt-get update
 # yes | sudo apt-get install \
 #     ca-certificates \
-#     curl \
 #     gnupg \
 #     lsb-release
 # sudo mkdir -p /etc/apt/keyrings
