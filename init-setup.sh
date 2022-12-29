@@ -10,11 +10,11 @@ fi
 
 echo "💻 Setting up the environment..."
 
-# # Update system
-# echo "🔄 Updating system..."
-# echo $PASSWORD | sudo -S apt-get update
-# echo $PASSWORD | sudo -S apt-get upgrade
-# echo "✔️ System updated successfully!"
+# Update system
+echo "🔄 Updating system..."
+echo $PASSWORD | sudo -S apt-get update
+echo $PASSWORD | sudo -S apt-get upgrade
+echo "✔️ System updated successfully!"
 
 # # Snap
 # echo "Snap 🐦"
