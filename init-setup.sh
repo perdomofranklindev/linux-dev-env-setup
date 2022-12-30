@@ -97,12 +97,11 @@ echo -e "💬 Installing Discord..."
 sleep 2s
 sudo snap install discord
 
-
 # Insomnia
 echo -e "Insomnia 🌑"
 sudo snap install insomnia
 
-# Insomnia
+# Onlyoffice
 echo -e "Onlyoffice 📃"
 sudo snap install onlyoffice-desktopeditors
 
