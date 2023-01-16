@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Author: Franklin Perdomo <perdomofranklindev@gmail.com>
+
 # ====================================
 # Previous setup
 # ====================================
