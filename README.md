@@ -27,3 +27,6 @@ Optionals:
 ## Tested Linux Distribution
 
 - Ubuntu 20.04, 22.10
+
+## Credit for the widget menu
+- Author: [Markus Geiger](https://github.com/blurayne)
