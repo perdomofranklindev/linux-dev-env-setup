@@ -1,4 +1,5 @@
 # Linux Development Environment Setup 🤓
+![Screenshot from 2023-01-16 17-55-07](https://user-images.githubusercontent.com/92344582/212771353-1b9c9188-861d-4209-811c-1b40e3a7ccc4.png)
 
 A small script code in .sh to install the default programs that i use often.
 
