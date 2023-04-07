@@ -1,18 +1,17 @@
 # Linux Development Environment Setup 🤓
 ![Screenshot from 2023-01-16 17-55-07](https://user-images.githubusercontent.com/92344582/212771353-1b9c9188-861d-4209-811c-1b40e3a7ccc4.png)
 
-Small script code in .sh to install the default programs that i use often.
+This script installs the default programs that I use often on my Linux development environment.
 
-Give permissions: `sudo chmod +x init-setup.sh`  
-Execute: `./init-setup.sh <password>`
+## How to use
+1. Give permissions: `sudo chmod +x init-setup.sh`  
+2. Execute: `./init-setup.sh <password>`
 
-Default tools:
-
+## Default tools
 1. [Curl 🌐](https://curl.se/)
 2. [Snap 🐦](https://snapcraft.io/docs/installing-snap-on-ubuntu)
 
-Optionals:
-
+## Optional tools
 1. [Insomnia 🌑](https://insomnia.rest/download)
 2. [Onlyoffice 📃](https://www.onlyoffice.com/)
 3. [Git 👨‍💻](https://git-scm.com/)
@@ -25,9 +24,10 @@ Optionals:
 10. [Discord 💬](https://discord.com/)
 11. [Fish terminal 🐟](https://fishshell.com/)
 
-## Tested Linux Distribution
+## Tested Linux Distributions
+- Ubuntu 20.04 
+- Ubuntu 20.04
 
-- Ubuntu 20.04, 22.10
-
-## Credit for the widget menu
-- Author: [Markus Geiger](https://github.com/blurayne)
+## Credits
+- Author: [Franklin Perdomo](https://github.com/perdomofranklindev)
+- Widget menu by: [Markus Geiger](https://github.com/blurayne)
