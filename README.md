@@ -4,8 +4,8 @@
 This script installs the default programs that I use often on my Linux development environment.
 
 ## How to use
-1. Give permissions: `sudo chmod +x init-setup.sh`  
-2. Execute: `./init-setup.sh <password>`
+1. Give permissions: `sudo chmod +x index.sh`  
+2. Execute: `./index.sh <password>`
 
 ## Default tools
 1. [Curl 🌐](https://curl.se/)
@@ -26,6 +26,7 @@ This script installs the default programs that I use often on my Linux developme
 
 ## Tested Linux Distributions
 - Ubuntu 20.04
+- Ubuntu 20.10
 
 ## Credits
 - Author: [Franklin Perdomo](https://github.com/perdomofranklindev)
