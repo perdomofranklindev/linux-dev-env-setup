@@ -62,7 +62,7 @@ do
         9)
         install_discord
         ;;
-        9)
+        10)
         install_fish_terminal
         ;;
     esac
