@@ -118,12 +118,6 @@ function install_fish_terminal() {
     echo /usr/local/bin/fish | sudo tee -a /etc/shells
     echo $PASSWORD | chsh -s $(which fish) # To revert => chsh -s $(which bash)
 
-    # Fish Node Version Manager
-    echo -e "Installing Node Version Manager 🍃"
-    sleep 2s
-    curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-    fisher install jorgebucaran/nvm.fish
-
     # Install Oh my fish
     echo -e "Installing Oh my fish 🎨"
     sleep 2s
@@ -131,4 +125,10 @@ function install_fish_terminal() {
     fish install --path=~/.local/share/omf --config=~/.config/omf
     echo -e "\n👌 You can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
     echo -e "It's super easy to use it!"
+
+    # Fish Node Version Manager
+    echo -e "Installing Node Version Manager 🍃"
+    sleep 2s
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    omf install nvm
 }
