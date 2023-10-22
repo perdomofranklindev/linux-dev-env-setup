@@ -65,6 +65,9 @@ do
         10)
         install_fish_terminal
         ;;
+        11)
+        install_obs
+        ;;
     esac
 done
 

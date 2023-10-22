@@ -132,3 +132,12 @@ function install_fish_terminal() {
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
     omf install nvm
 }
+
+# OBS
+function install_obs() {
+    echo -e "📹 OBS"
+    sleep 2s
+    sudo add-apt-repository ppa:obsproject/obs-studio
+    sudo apt update
+    udo apt install ffmpeg obs-studio
+}
