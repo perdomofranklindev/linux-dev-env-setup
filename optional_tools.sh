@@ -106,17 +106,17 @@ function install_discord() {
 
 # Fish terminal
 function install_fish_terminal() {
-    echo -e "🐟 Fish Terminal"
-    sleep 2s
-    echo -ne '\n' | sudo apt-add-repository ppa:fish-shell/release-3
-    sudo apt update
-    yes | sudo apt install fish
+    # echo -e "🐟 Fish Terminal"
+    # sleep 2s
+    # echo -ne '\n' | sudo apt-add-repository ppa:fish-shell/release-3
+    # sudo apt update
+    # yes | sudo apt install fish
 
-    # Fish as default terminal
-    echo -e "configure the default terminal 🔨"
-    sleep 2s
-    echo /usr/local/bin/fish | sudo tee -a /etc/shells
-    echo $PASSWORD | chsh -s $(which fish) # To revert => chsh -s $(which bash)
+    # # Fish as default terminal
+    # echo -e "configure the default terminal 🔨"
+    # sleep 2s
+    # echo /usr/local/bin/fish | sudo tee -a /etc/shells
+    # echo $PASSWORD | chsh -s $(which fish) # To revert => chsh -s $(which bash)
 
     # Install Oh my fish
     echo -e "Installing Oh my fish 🎨"
