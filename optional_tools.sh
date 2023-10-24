@@ -139,5 +139,5 @@ function install_obs() {
     sleep 2s
     sudo add-apt-repository ppa:obsproject/obs-studio
     sudo apt update
-    udo apt install ffmpeg obs-studio
+    sudo apt install ffmpeg obs-studio
 }
