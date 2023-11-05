@@ -68,6 +68,8 @@ do
         11)
         install_obs
         ;;
+        12)
+        install_pgadmin
     esac
 done
 

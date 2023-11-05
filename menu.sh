@@ -452,8 +452,8 @@ ui_widget_select() {
 # echo -e "\e[4mMENU: multi-select, using indexed keys, preselection, leave selected options\e[24m\n"
 echo -e "\nUse the directions key to browser 🔝; SPACE to select/unselect ✅; ENTER to confirm\n"
 # options=("Option 1" "Option 2" "Option 3" "Option 4" "Option 5" "Option 6" "Option 7" "Option 8" "Option 9" "Option 10" "Option 11" "Option 12")
-options=("Insomnia 🌑" "Onlyoffice 📃" "Git 👨‍💻" "Docker 🐳" "Google Chrome 🔎" "Visual Studio Code 💻" "Android Studio 📱" "Spotify 🎧" "Slack 🎙" "Discord 💬" "Fish terminal 🐟" "OBS 📹")
-ui_widget_select -l -m -s 0 1 2 3 4 5 6 7 8 9 10 11 -i "${options[@]}"
+options=("Insomnia 🌑" "Onlyoffice 📃" "Git 👨‍💻" "Docker 🐳" "Google Chrome 🔎" "Visual Studio Code 💻" "Android Studio 📱" "Spotify 🎧" "Slack 🎙" "Discord 💬" "Fish terminal 🐟" "OBS 📹" "📊 PgAdmin")
+ui_widget_select -l -m -s 0 1 2 3 4 5 6 7 8 9 10 11 12 -i "${options[@]}"
 # echo "Return code: $?"
 # echo "Selected item(s): ${UI_WIDGET_RC[@]}";
 

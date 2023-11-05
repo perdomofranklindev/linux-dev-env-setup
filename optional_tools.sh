@@ -36,8 +36,8 @@ function install_docker() {
     sudo mkdir -p /etc/apt/keyrings
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
     echo \
-    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+        "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
     sudo apt-get update
     sudo chmod a+r /etc/apt/keyrings/docker.gpg
     sudo apt-get update
@@ -62,9 +62,9 @@ function install_docker_compose() {
 function install_chrome() {
     echo -e "🔎 Installing Google Chrome..."
     sleep 2s
-    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add 
+    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add
     echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-    sudo apt-get update 
+    sudo apt-get update
     sudo apt-get install google-chrome-stable
 }
 
@@ -83,21 +83,21 @@ function install_android_studio() {
     sudo snap install android-studio --classic
 }
 
-# Spotify 
+# Spotify
 function install_spotify() {
     echo -e "🎧 Installing Spotify..."
     sleep 2s
     sudo snap install spotify
 }
 
-# Slack 
+# Slack
 function install_slack() {
     echo -e "🎙 Installing Slack..."
     sleep 2s
     sudo snap install slack --classic
 }
 
-# Discord 
+# Discord
 function install_discord() {
     echo -e "💬 Installing Discord..."
     sleep 2s
@@ -106,22 +106,22 @@ function install_discord() {
 
 # Fish terminal
 function install_fish_terminal() {
-    # echo -e "🐟 Fish Terminal"
-    # sleep 2s
-    # echo -ne '\n' | sudo apt-add-repository ppa:fish-shell/release-3
-    # sudo apt update
-    # yes | sudo apt install fish
+    echo -e "🐟 Fish Terminal"
+    sleep 2s
+    echo -ne '\n' | sudo apt-add-repository ppa:fish-shell/release-3
+    sudo apt update
+    yes | sudo apt install fish
 
-    # # Fish as default terminal
-    # echo -e "configure the default terminal 🔨"
-    # sleep 2s
-    # echo /usr/local/bin/fish | sudo tee -a /etc/shells
-    # echo $PASSWORD | chsh -s $(which fish) # To revert => chsh -s $(which bash)
+    # Fish as default terminal
+    echo -e "configure the default terminal 🔨"
+    sleep 2s
+    echo /usr/local/bin/fish | sudo tee -a /etc/shells
+    echo $PASSWORD | chsh -s $(which fish) # To revert => chsh -s $(which bash)
 
     # Install Oh my fish
     echo -e "Installing Oh my fish 🎨"
     sleep 2s
-    curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > install
+    curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install >install
     fish install --path=~/.local/share/omf --config=~/.config/omf
     echo -e "\n👌 You can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
     echo -e "It's super easy to use it!"
@@ -140,4 +140,13 @@ function install_obs() {
     sudo add-apt-repository ppa:obsproject/obs-studio
     sudo apt update
     sudo apt install ffmpeg obs-studio
+}
+
+# PgAdmin
+function install_pgadmin() {
+    echo -e "📊 PgAdmin"
+    sleep 2s
+    curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+    sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+    sudo apt install pgadmin4
 }
