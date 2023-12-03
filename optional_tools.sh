@@ -104,6 +104,16 @@ function install_discord() {
     sudo snap install discord
 }
 
+function install_omf() {
+    # Install Oh my fish
+    echo -e "Installing Oh my fish 🎨"
+    sleep 2s
+    curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install >install
+    fish install --path=~/.local/share/omf --config=~/.config/omf
+    echo -e "\n👌 You can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
+    echo -e "It's super easy to use it!"
+}
+
 # Fish terminal
 function install_fish_terminal() {
     echo -e "🐟 Fish Terminal"
@@ -118,13 +128,7 @@ function install_fish_terminal() {
     echo /usr/local/bin/fish | sudo tee -a /etc/shells
     echo $PASSWORD | chsh -s $(which fish) # To revert => chsh -s $(which bash)
 
-    # Install Oh my fish
-    echo -e "Installing Oh my fish 🎨"
-    sleep 2s
-    curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install >install
-    fish install --path=~/.local/share/omf --config=~/.config/omf
-    echo -e "\n👌 You can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
-    echo -e "It's super easy to use it!"
+    install_omf
 
     # Fish Node Version Manager
     echo -e "Installing Node Version Manager 🍃"
