@@ -109,7 +109,9 @@ function install_omf() {
     echo -e "Installing Oh my fish 🎨"
     sleep 2s
     curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install >install
+    set +e
     fish install --path=~/.local/share/omf --config=~/.config/omf
+    set -e
     echo -e "\n👌 You can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
     echo -e "It's super easy to use it!"
 }
