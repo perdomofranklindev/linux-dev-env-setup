@@ -129,7 +129,9 @@ function install_fish_terminal() {
     echo /usr/local/bin/fish | sudo tee -a /etc/shells
     echo $PASSWORD | chsh -s $(which fish) # To revert => chsh -s $(which bash)
 
-    install_omf
+    trap 'echo "Finished installing fish!"' EXIT
+    (install_omf)
+    echo -e "installed_omf end!"
 
     # Fish Node Version Manager
     echo -e "Installing Node Version Manager 🍃"
