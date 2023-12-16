@@ -13,7 +13,7 @@ function default_tools() {
     # Curl
     echo "Installing curl 🌐"
     sleep 2s
-    sudo apt-get install curl
+    yes | sudo apt-get install curl
 
     # Snap
     echo "Snap 🐦"
