@@ -130,8 +130,13 @@ function install_fish_terminal() {
     echo $PASSWORD | chsh -s $(which fish) # To revert => chsh -s $(which bash)
 
     trap 'echo "Finished installing fish!"' EXIT
-    (install_omf)
-    echo -e "installed_omf end!"
+    output=$(install_omf 2>&1)
+    if [[ $? -eq 0 ]]; then
+      echo "Installation successful!"
+    else
+      echo "Installation failed!"
+      echo "$output"
+    fi
 
     # Fish Node Version Manager
     echo -e "Installing Node Version Manager 🍃"
