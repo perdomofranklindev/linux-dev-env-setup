@@ -128,11 +128,13 @@ function install_fish_terminal() {
     sleep 2s
     echo $PASSWORD | sudo -S sh -c 'echo /usr/local/bin/fish | cat >> /etc/shells' &
     echo -e "Passed!"
+    read -n 0
     # $(echo $PASSWORD | sudo -S sh -c 'echo /usr/local/bin/fish | cat >> /etc/shells')
     # echo -e "$(sudo -S sh -c 'echo /usr/local/bin/fish | cat >> /etc/shells')"
-    
+    read -n 0
     echo $PASSWORD | chsh -s $(which fish) # To revert => chsh -s $(which bash)
-
+    read -n 0
+    
     # This for prevent a premature exit
     trap 'echo "Finished installing fish!"' EXIT
     output=$(install_omf 2>&1)
