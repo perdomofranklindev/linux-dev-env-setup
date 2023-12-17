@@ -126,7 +126,8 @@ function install_fish_terminal() {
     # Fish as default terminal
     echo -e "configure the default terminal 🔨"
     sleep 2s
-    sudo -S sh -c 'echo /usr/local/bin/fish | cat >> /etc/shells' &
+    echo $PASSWORD | sudo -S sh -c 'echo /usr/local/bin/fish | cat >> /etc/shells' &
+    echo -e "Passed!"
     # $(echo $PASSWORD | sudo -S sh -c 'echo /usr/local/bin/fish | cat >> /etc/shells')
     # echo -e "$(sudo -S sh -c 'echo /usr/local/bin/fish | cat >> /etc/shells')"
     
