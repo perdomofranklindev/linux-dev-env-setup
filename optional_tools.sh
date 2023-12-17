@@ -126,13 +126,12 @@ function install_fish_terminal() {
     # Fish as default terminal
     echo -e "configure the default terminal 🔨"
     sleep 2s
-    # echo /usr/local/bin/fish | sudo tee -a /etc/shells
-    read -n 0
-    $(echo $PASSWORD | sudo -S sh -c 'echo /usr/local/bin/fish | cat >> /etc/shells')
+    echo /usr/local/bin/fish | sudo tee -a /etc/shells
+    echo -e "Please press ENTER, this is a bug that I haven't fixed 😕"
     echo $PASSWORD | chsh -s $(which fish) # To revert => chsh -s $(which bash)
     
     
-    # This for prevent a premature exit
+    # This is for prevent a premature exit
     trap 'echo "Finished installing fish!"' EXIT
     output=$(install_omf 2>&1)
     if [[ $? -eq 0 ]]; then
