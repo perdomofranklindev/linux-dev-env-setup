@@ -128,8 +128,9 @@ function install_fish_terminal() {
     sleep 2s
     
     read -n 0
-    ${echo /usr/local/bin/fish | sudo tee -a /etc/shells}
+    $('echo /usr/local/bin/fish | tee -a /etc/shells')
     read -n 0
+    # $(echo $PASSWORD | sudo -S sh -c 'echo /usr/local/bin/fish | cat >> /etc/shells')
  
     # echo -e "$(echo $PASSWORD | sudo -S sh -c 'echo /usr/local/bin/fish | cat >> /etc/shells')"
     
