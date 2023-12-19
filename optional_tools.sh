@@ -12,13 +12,6 @@ function install_onlyoffice() {
     sudo snap install onlyoffice-desktopeditors
 }
 
-# Install Git
-function install_git() {
-    echo -e "Installing Git 👨‍💻"
-    sleep 2s
-    yes | sudo apt-get install git
-}
-
 # Install Docker
 function install_docker() {
     echo -e "Installing Docker 🐳"
