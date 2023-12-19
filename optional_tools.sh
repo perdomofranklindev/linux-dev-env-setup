@@ -145,9 +145,9 @@ function install_fish_terminal() {
 function install_obs() {
     echo -e "📹 OBS"
     sleep 2s
-    sudo add-apt-repository ppa:obsproject/obs-studio
-    sudo apt update
-    sudo apt install ffmpeg obs-studio
+    echo | sudo add-apt-repository ppa:obsproject/obs-studio
+    yes | sudo apt update
+    yes | sudo apt install ffmpeg obs-studio
 }
 
 # PgAdmin
