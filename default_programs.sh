@@ -22,3 +22,10 @@ function default_tools() {
 
     echo -e "\n"
 }
+
+# Install Git
+function install_git() {
+    echo -e "Installing Git 👨‍💻"
+    sleep 2s
+    yes | sudo apt-get install git
+}
