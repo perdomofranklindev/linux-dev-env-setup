@@ -19,6 +19,7 @@ fi
 
 update_system
 default_tools
+install_git
 
 # ====================================
 # Show the options
