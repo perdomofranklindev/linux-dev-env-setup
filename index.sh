@@ -39,36 +39,33 @@ do
         install_onlyoffice
         ;;
         2)
-        install_git
-        ;;
-        3)
         install_docker
         ;;
-        4)
+        3)
         install_chrome
         ;;
-        5)
+        4)
         install_visualstudio
         ;;
-        6)
+        5)
         install_android_studio
         ;;
-        7)
+        6)
         install_spotify
         ;;
-        8)
+        7)
         install_slack
         ;;
-        9)
+        8)
         install_discord
         ;;
-        10)
+        9)
         install_fish_terminal
         ;;
-        11)
+        10)
         install_obs
         ;;
-        12)
+        11)
         install_pgadmin
     esac
 done
