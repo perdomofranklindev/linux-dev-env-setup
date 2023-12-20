@@ -1,7 +1,7 @@
 # Linux Development Environment Setup 🤓
 ![Screenshot from 2023-01-16 17-55-07](https://user-images.githubusercontent.com/92344582/212771353-1b9c9188-861d-4209-811c-1b40e3a7ccc4.png)
 
-This script installs the default programs that I use often on my Linux development environment.
+A script to configure a basic development environment on linux.
 
 ## How to use
 1. Give permissions: `sudo chmod +x index.sh`  
