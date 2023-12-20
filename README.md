@@ -25,8 +25,7 @@ This script installs the default programs that I use often on my Linux developme
 10. [Fish terminal 🐟](https://fishshell.com/)
 
 ## Tested Linux Distributions
-- Ubuntu 20.04
-- Ubuntu 20.10
+- Ubuntu 23.10
 
 ## Credits
 - Author: [Franklin Perdomo](https://github.com/perdomofranklindev)
