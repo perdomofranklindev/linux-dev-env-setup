@@ -20,12 +20,10 @@ function default_tools() {
     sleep 2s
     sudo apt install snapd
 
-    echo -e "\n"
-}
-
-# Install Git
-function install_git() {
+    # Github
     echo -e "Installing Git 👨‍💻"
     sleep 2s
     yes | sudo apt-get install git
+    
+    echo -e "\n"
 }
