@@ -5,7 +5,7 @@ function install_insomnium() {
     echo -e "Installing Insomnium 🌑"
     sudo wget https://github.com/ArchGPT/insomnium/releases/download/core%400.2.3-a/Insomnium.Core-0.2.3-a.deb
     sudo dpkg -i Insomnium.Core-0.2.3-a.deb
-    rm Insomnium.Core-0.2.3-a.deb
+    sudo rm -rf Insomnium.Core-0.2.3-a.deb
 }
 
 # Install Onlyoffice
