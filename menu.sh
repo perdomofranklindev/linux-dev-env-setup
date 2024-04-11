@@ -453,7 +453,7 @@ ui_widget_select() {
 echo -e "\nUse the directions key to browser 🔝; SPACE to select/unselect ✅; ENTER to confirm\n"
 # options=("Option 1" "Option 2" "Option 3" "Option 4" "Option 5" "Option 6" "Option 7" "Option 8" "Option 9" "Option 10" "Option 11" "Option 12")
 options=(
-  "Insomnia 🌑"
+  "Insomnium 🌑"
   "Onlyoffice 📃"
   "Docker 🐳"
   "Google Chrome 🔎"
