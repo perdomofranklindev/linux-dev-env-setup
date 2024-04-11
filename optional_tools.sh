@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # Install Insomnia
-function install_insomnia() {
-    echo -e "Installing Insomnia 🌑"
-    sudo snap install insomnia
+function install_insomnium() {
+    echo -e "Installing Insomnium 🌑"
+    sudo wget https://github.com/ArchGPT/insomnium/releases/download/core%400.2.3-a/Insomnium.Core-0.2.3-a.deb
+    sudo dpkg -i Insomnium.Core-0.2.3-a.deb
+    rm Insomnium.Core-0.2.3-a.deb
 }
 
 # Install Onlyoffice
@@ -122,7 +124,6 @@ function install_fish_terminal() {
     echo /usr/local/bin/fish | sudo tee -a /etc/shells
     echo -e "Please press ENTER, this is a bug that I haven't fixed 😕"
     echo $PASSWORD | chsh -s $(which fish) # To revert => chsh -s $(which bash)
-    
     
     # This is for prevent a premature exit
     trap 'echo "Finished installing fish!"' EXIT

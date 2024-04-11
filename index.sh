@@ -34,7 +34,7 @@ for item in "${UI_WIDGET_RC[@]}"
 do
     case $item in
         0)
-        install_insomnia
+        install_insomnium
         ;;
         1)
         install_onlyoffice

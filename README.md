@@ -13,7 +13,7 @@ A script to configure a basic development environment on linux.
 3. [Git 👨‍💻](https://git-scm.com/)
 
 ## Optional tools
-1. [Insomnia 🌑](https://insomnia.rest/download)
+1. [Insomnium 🌑](https://github.com/ArchGPT/insomnium)
 2. [Onlyoffice 📃](https://www.onlyoffice.com/)
 3. [Docker & Docker Compose 🐳](https://www.docker.com/)
 4. [Google Chrome 🔎](https://www.google.com/intl/es/chrome/?brand=YTUH&gclid=Cj0KCQjw_7KXBhCoARIsAPdPTfgwWCrhGi51XzOTteYA2WEGwQKSe44Qd1Xd0TwE4EKAQ7ZmZ1WUiZ4aAmx_EALw_wcB&gclsrc=aw.ds)
