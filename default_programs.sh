@@ -2,8 +2,8 @@
 
 function update_system() {
     echo "🔄 Updating system..."
-    echo $PASSWORD | sudo -S apt-get update
-    echo $PASSWORD | sudo -S apt-get upgrade
+    echo $password | sudo -S apt-get update
+    echo $password | sudo -S apt-get upgrade
     echo "✔️ System updated successfully!"
 }
 

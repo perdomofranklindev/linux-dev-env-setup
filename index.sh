@@ -12,7 +12,7 @@ source default_programs.sh
 echo -n "Enter your password: "
 read -s password
 
-set password $env(password)
+# set password $env(password)
 
 # # Set your password here
 # PASSWORD=$1
