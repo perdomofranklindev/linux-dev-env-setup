@@ -9,7 +9,11 @@
 # Default programs
 source default_programs.sh
 
-set password $env(password)
+echo -n "Enter your password: "
+read -s password
+
+# set password $env(password)
+
 # # Set your password here
 # PASSWORD=$1
 
