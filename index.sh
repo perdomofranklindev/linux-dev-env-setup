@@ -18,11 +18,30 @@ update_system
 default_tools
 
 
-dialog --checklist "Choose toppings:" 10 40 3 \
-        1 Cheese on \
-        2 "Tomato Sauce" on \
-        3 Anchovies off
+# Display the checklist using dialog
+selected_toppings=$(dialog --checklist "Choose toppings:" 10 40 3 \
+        1 "Insomnium 🌑" on \
+        2 "Onlyoffice 📃" on \
+        3 "Docker 🐳" on 2>&1 >/dev/tty)
 
+# Process the selected toppings
+case "$selected_toppings" in
+    *Insomnium*)
+        echo "Running command for Insomnium..."
+        # Add your command for Insomnium here
+        ;;
+    *Onlyoffice*)
+        echo "Running command for Onlyoffice..."
+        # Add your command for Onlyoffice here
+        ;;
+    *Docker*)
+        echo "Running command for Docker..."
+        # Add your command for Docker here
+        ;;
+    *)
+        echo "No toppings selected."
+        ;;
+esac
 # # ====================================
 # # Show the options
 # # ====================================
