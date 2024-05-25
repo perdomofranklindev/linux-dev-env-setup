@@ -6,25 +6,22 @@
 # Previous setup
 # ====================================
 
-# Default programs
-source default_programs.sh
-
+# Set your password here
 echo -n "Enter your password: "
 read -s password
 echo ""
 
-# set password $env(password)
-
-# # Set your password here
-# PASSWORD=$1
-
-# if [ -z "$PASSWORD" ]; then
-#   echo "Please provide a password"
-#   exit 1
-# fi
+# Default programs
+source default_programs.sh
 
 update_system
 default_tools
+
+
+dialog --checklist "Choose toppings:" 10 40 3 \
+        1 Cheese on \
+        2 "Tomato Sauce" on \
+        3 Anchovies off
 
 # # ====================================
 # # Show the options
