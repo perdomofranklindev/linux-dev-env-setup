@@ -15,20 +15,20 @@ function default_tools() {
     sleep 2s
     yes | sudo apt-get install curl
 
-    # Snap
-    echo "Snap 🐦"
-    sleep 2s
-    sudo apt install snapd
+    # # Snap
+    # echo "Snap 🐦"
+    # sleep 2s
+    # sudo apt install snapd
 
-    # Github
-    echo -e "Installing Git 👨‍💻"
-    sleep 2s
-    yes | sudo apt-get install git
+    # # Github
+    # echo -e "Installing Git 👨‍💻"
+    # sleep 2s
+    # yes | sudo apt-get install git
     
-    # Dialog
-    echo -e "Dialog 💬"
-    sleep 2s
-    yes | sudo apt-get install dialog
+    # # Dialog
+    # echo -e "Dialog 💬"
+    # sleep 2s
+    # yes | sudo apt-get install dialog
 
     echo -e "\n"
 }

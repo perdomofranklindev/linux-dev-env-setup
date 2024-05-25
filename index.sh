@@ -23,7 +23,7 @@ read -s password
 # fi
 
 update_system
-# default_tools
+default_tools
 
 # # ====================================
 # # Show the options
