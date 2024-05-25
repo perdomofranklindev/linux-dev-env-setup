@@ -21,7 +21,7 @@ function default_tools() {
     sudo apt install snapd
 
     # Github
-    echo -e "Installing Git 👨‍💻"
+    echo -e "Installing Git 🖥️"
     sleep 2s
     yes | sudo apt-get install git
     
