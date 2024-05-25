@@ -25,5 +25,10 @@ function default_tools() {
     sleep 2s
     yes | sudo apt-get install git
     
+    # Dialog
+    echo -e "Dialog 💬"
+    sleep 2s
+    yes | sudo apt-get install dialog
+
     echo -e "\n"
 }

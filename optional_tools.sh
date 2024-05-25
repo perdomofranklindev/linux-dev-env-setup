@@ -99,8 +99,8 @@ function install_discord() {
     sudo snap install discord
 }
 
+# Install Oh my fish
 function install_omf() {
-    # Install Oh my fish
     echo -e "Installing Oh my fish 🎨"
     sleep 2s
     curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install >install
@@ -108,6 +108,18 @@ function install_omf() {
     ( fish install --path=~/.local/share/omf --config=~/.config/omf ) & wait $!
     echo -e "\n👌 You can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
     echo -e "It's super easy to use it!"
+}
+
+# Install Warp
+function install_warp() {
+    echo -e "Installing warp 🪄"
+    sleep 2s
+    sudo apt-get install wget gpg
+    wget -qO- https://releases.warp.dev/linux/keys/warp.asc | gpg --dearmor > warpdotdev.gpg
+    sudo install -D -o root -g root -m 644 warpdotdev.gpg /etc/apt/keyrings/warpdotdev.gpg
+    sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/warpdotdev.gpg] https://releases.warp.dev/linux/deb stable main" > /etc/apt/sources.list.d/warpdotdev.list'
+    rm warpdotdev.gpg
+    sudo apt update && sudo apt install warp-terminal
 }
 
 # Fish terminal
