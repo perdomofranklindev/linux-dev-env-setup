@@ -18,9 +18,9 @@ function install_onlyoffice() {
 function install_docker() {
     echo -e "Installing Docker 🐳"
     sleep 2s
-    echo $PASSWORD | sudo snap install docker
-    echo $PASSWORD | sudo apt update
-    echo $PASSWORD | sudo apt install apt-transport-https ca-certificates curl software-properties-common
+    echo $password | sudo snap install docker
+    echo $password | sudo apt update
+    echo $password | sudo apt install apt-transport-https ca-certificates curl software-properties-common
 
     sudo apt-get remove docker docker-engine docker.io containerd runc
     sudo apt-get update
@@ -135,7 +135,7 @@ function install_fish_terminal() {
     sleep 2s
     echo /usr/local/bin/fish | sudo tee -a /etc/shells
     echo -e "Please press ENTER, this is a bug that I haven't fixed 😕"
-    echo $PASSWORD | sudo chsh -s $(which fish) # To revert => chsh -s $(which bash)
+    echo $password | sudo chsh -s $(which fish) # To revert => chsh -s $(which bash)
     
     # This is for prevent a premature exit
     trap 'echo "Finished installing fish!"' EXIT
