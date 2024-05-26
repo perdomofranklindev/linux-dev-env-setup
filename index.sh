@@ -36,9 +36,10 @@ selection=$(dialog --checklist "Choose toppings:" 30 80 13 \
   8 "Slack 🎙" on \
   9 "Discord 💬" on \
   10 "Warp 🪄" on \
-  11 "Fish Terminal 🐟" on \
-  12 "OBS 📹" on \
-  13 "PgAdmin 📊" on 2>&1 >/dev/tty)
+  11 "Node Version Manager" on \
+  12 "Fish Terminal 🐟" on \
+  13 "OBS 📹" on \
+  14 "PgAdmin 📊" on 2>&1 >/dev/tty)
 
 # Check if the user made a selection
 if [[ -z "$selection" ]]; then
@@ -60,9 +61,10 @@ else
     8) install_slack ;;
     9) install_discord ;;
     10) install_warp ;;
-    11) install_fish_terminal ;;
-    12) install_obs ;;
-    13) install_pgadmin ;;
+    11) install_warp ;;
+    12) install_fish_terminal ;;
+    13) install_obs ;;
+    14) install_pgadmin ;;
     *) echo "Unknown selection" ;;
     esac
   done

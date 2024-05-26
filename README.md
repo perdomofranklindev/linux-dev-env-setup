@@ -24,9 +24,10 @@ A script to configure a basic development environment on linux.
 8. [Slack 🎙](https://slack.com/)
 9. [Discord 💬](https://discord.com/)
 10. [Warp 🪄](https://www.warp.dev/)
-11. [Fish Terminal 🐟](https://fishshell.com/)
-12. [OBS 📹](https://obsproject.com/es)
-13. [PgAdmin 📊](https://www.pgadmin.org/download/)
+11. Node Version Manager
+12. [Fish Terminal 🐟](https://fishshell.com/)
+13. [OBS 📹](https://obsproject.com/es)
+14. [PgAdmin 📊](https://www.pgadmin.org/download/)
 
 ## Tested Linux Distributions
 - Ubuntu 24.04

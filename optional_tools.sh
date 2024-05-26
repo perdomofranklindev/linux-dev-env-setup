@@ -122,6 +122,13 @@ function install_warp() {
     sudo apt update && sudo apt install warp-terminal
 }
 
+function install_nvm() {
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+    source ~/.bashrc
+    nvm --version
+    nvm install node
+}
+
 # Fish terminal
 function install_fish_terminal() {
     echo -e "🐟 Fish Terminal"
