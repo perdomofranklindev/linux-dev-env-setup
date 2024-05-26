@@ -29,6 +29,13 @@ A script to configure a basic development environment on linux.
 13. [OBS 📹](https://obsproject.com/es)
 14. [PgAdmin 📊](https://www.pgadmin.org/download/)
 
+## Fish as a default terminal
+
+```bash
+echo /usr/local/bin/fish | sudo tee -a /etc/shells
+sudo chsh -s $(which fish)
+```
+
 ## Tested Linux Distributions
 - Ubuntu 24.04
 
