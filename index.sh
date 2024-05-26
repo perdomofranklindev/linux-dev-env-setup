@@ -36,7 +36,7 @@ selection=$(dialog --checklist "Choose toppings:" 30 80 13 \
   8 "Slack 🎙" on \
   9 "Discord 💬" on \
   10 "Warp 🪄" on \
-  11 "Node Version Manager" on \
+  11 "Node Version Manager 🔰" on \
   12 "Fish Terminal 🐟" on \
   13 "OBS 📹" on \
   14 "PgAdmin 📊" on 2>&1 >/dev/tty)
