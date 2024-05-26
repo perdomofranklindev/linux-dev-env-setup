@@ -106,6 +106,7 @@ function install_omf() {
     curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install >install
     echo -e "Curl oh my fish installation done!"
     fish install --path=~/.local/share/omf --config=~/.config/omf
+    echo -e "Hi"
     echo -e "\n👌 You can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
     echo -e "It's super easy to use it!"
 }
@@ -142,16 +143,7 @@ function install_fish_terminal() {
     echo /usr/local/bin/fish | sudo tee -a /etc/shells
     echo $password | sudo chsh -s $(which fish) # To revert => chsh -s $(which bash)
 
-    # This is for prevent a premature exit
-    install_omf
-    # trap 'echo "Finished installing fish!"' EXIT
-    # output=$(install_omf 2>&1)
-    # if [[ $? -eq 0 ]]; then
-    #     echo "Installation successful!"
-    # else
-    #     echo "Installation failed!"
-    #     echo "$output"
-    # fi
+    bash install_omf.sh
 
     # Fish Node Version Manager
     echo -e "Installing Node Version Manager 🍃"
