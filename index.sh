@@ -61,7 +61,7 @@ else
     8) install_slack ;;
     9) install_discord ;;
     10) install_warp ;;
-    11) install_warp ;;
+    11) install_nvm ;;
     12) install_fish_terminal ;;
     13) install_obs ;;
     14) install_pgadmin ;;
