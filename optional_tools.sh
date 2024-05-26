@@ -141,7 +141,7 @@ function install_fish_terminal() {
     sleep 2s
     echo /usr/local/bin/fish | sudo tee -a /etc/shells
     echo -e "Please press ENTER, this is a bug that I haven't fixed 😕"
-    yes | sudo chsh -s $(which fish) # To revert => chsh -s $(which bash)
+    sudo chsh -s $(which fish) # To revert => chsh -s $(which bash)
 
     # Fish Node Version Manager
     echo -e "Installing Node Version Manager 🍃"
