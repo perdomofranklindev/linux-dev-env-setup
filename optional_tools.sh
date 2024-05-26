@@ -153,11 +153,11 @@ function install_fish_terminal() {
       echo "$output"
     fi
 
-    # Fish Node Version Manager
-    echo -e "Installing Node Version Manager 🍃"
-    sleep 2s
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-    omf install nvm
+    # # Fish Node Version Manager
+    # echo -e "Installing Node Version Manager 🍃"
+    # sleep 2s
+    # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    # omf install nvm
 }
 
 # OBS
