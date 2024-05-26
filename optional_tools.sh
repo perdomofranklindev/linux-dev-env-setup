@@ -143,11 +143,11 @@ function install_fish_terminal() {
     # echo -e "Please press ENTER, this is a bug that I haven't fixed 😕"
     # echo $password | sudo chsh -s $(which fish) # To revert => chsh -s $(which bash)
 
-    # # Fish Node Version Manager
-    # echo -e "Installing Node Version Manager 🍃"
-    # sleep 2s
-    # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-    # omf install nvm
+    # Fish Node Version Manager
+    echo -e "Installing Node Version Manager 🍃"
+    sleep 2s
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    omf install nvm
 }
 
 # OBS
