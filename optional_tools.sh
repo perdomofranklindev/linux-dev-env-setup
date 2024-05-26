@@ -99,18 +99,6 @@ function install_discord() {
     sudo snap install discord
 }
 
-# Install Oh my fish
-function install_omf() {
-    echo -e "Installing Oh my fish 🎨"
-    sleep 2s
-    curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install >install
-    echo -e "Curl oh my fish installation done!"
-    fish install --path=~/.local/share/omf --config=~/.config/omf
-    echo -e "Hi"
-    echo -e "\n👌 You can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
-    echo -e "It's super easy to use it!"
-}
-
 # Install Warp
 function install_warp() {
     echo -e "Installing warp 🪄"
@@ -142,14 +130,6 @@ function install_fish_terminal() {
     sleep 2s
     echo /usr/local/bin/fish | sudo tee -a /etc/shells
     echo $password | sudo chsh -s $(which fish) # To revert => chsh -s $(which bash)
-
-    bash install_omf.sh
-
-    # Fish Node Version Manager
-    echo -e "Installing Node Version Manager 🍃"
-    sleep 2s
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-    omf install nvm
 }
 
 # OBS

@@ -29,14 +29,24 @@ A script to configure a basic development environment on linux.
 13. [OBS 📹](https://obsproject.com/es)
 14. [PgAdmin 📊](https://www.pgadmin.org/download/)
 
-## Fish as a default terminal
+## Fish terminal extra options
+
+Oh My Fish is an installation manager, you will need it if you want to use NVM on it.
 
 ```bash
-echo /usr/local/bin/fish | sudo tee -a /etc/shells
-sudo chsh -s $(which fish)
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install >install
+fish install --path=~/.local/share/omf --config=~/.config/omf
 ```
 
+NVM on Fish
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+omf install nvm
+```
 
+Change your theme flavour [here](https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md)
+
+You're wondering why the command lines above aren't added on the fish terminal installation? Well, the second command line causes the script to exit prematurely, until now, I haven't found a way to prevent that.
 
 ## Tested Linux Distributions
 - Ubuntu 24.04
