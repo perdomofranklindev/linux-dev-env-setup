@@ -36,6 +36,8 @@ echo /usr/local/bin/fish | sudo tee -a /etc/shells
 sudo chsh -s $(which fish)
 ```
 
+
+
 ## Tested Linux Distributions
 - Ubuntu 24.04
 

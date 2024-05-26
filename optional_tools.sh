@@ -138,21 +138,21 @@ function install_fish_terminal() {
     yes | sudo apt install fish
 
     # Fish as default terminal
-    # echo -e "configure the default terminal 🔨"
-    # sleep 2s
-    # echo /usr/local/bin/fish | sudo tee -a /etc/shells
+    echo -e "configure the default terminal 🔨"
+    sleep 2s
+    echo /usr/local/bin/fish | sudo tee -a /etc/shells
     # echo -e "Please press ENTER, this is a bug that I haven't fixed 😕"
-    # echo $password | sudo chsh -s $(which fish) # To revert => chsh -s $(which bash)
+    echo $password | sudo chsh -s $(which fish) # To revert => chsh -s $(which bash)
 
     # This is for prevent a premature exit
-    trap 'echo "Finished installing fish!"' EXIT
-    output=$(install_omf 2>&1)
-    if [[ $? -eq 0 ]]; then
-        echo "Installation successful!"
-    else
-        echo "Installation failed!"
-        echo "$output"
-    fi
+    # trap 'echo "Finished installing fish!"' EXIT
+    # output=$(install_omf 2>&1)
+    # if [[ $? -eq 0 ]]; then
+    #     echo "Installation successful!"
+    # else
+    #     echo "Installation failed!"
+    #     echo "$output"
+    # fi
 
     # # Fish Node Version Manager
     # echo -e "Installing Node Version Manager 🍃"
