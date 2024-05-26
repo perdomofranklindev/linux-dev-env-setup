@@ -138,11 +138,11 @@ function install_fish_terminal() {
     yes | sudo apt install fish
 
     # Fish as default terminal
-    echo -e "configure the default terminal 🔨"
-    sleep 2s
-    echo /usr/local/bin/fish | sudo tee -a /etc/shells
-    echo -e "Please press ENTER, this is a bug that I haven't fixed 😕"
-    echo $password | sudo chsh -s $(which fish) # To revert => chsh -s $(which bash)
+    # echo -e "configure the default terminal 🔨"
+    # sleep 2s
+    # echo /usr/local/bin/fish | sudo tee -a /etc/shells
+    # echo -e "Please press ENTER, this is a bug that I haven't fixed 😕"
+    # echo $password | sudo chsh -s $(which fish) # To revert => chsh -s $(which bash)
 
     # This is for prevent a premature exit
     trap 'echo "Finished installing fish!"' EXIT
@@ -154,11 +154,11 @@ function install_fish_terminal() {
         echo "$output"
     fi
 
-    # Fish Node Version Manager
-    echo -e "Installing Node Version Manager 🍃"
-    sleep 2s
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-    omf install nvm
+    # # Fish Node Version Manager
+    # echo -e "Installing Node Version Manager 🍃"
+    # sleep 2s
+    # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    # omf install nvm
 }
 
 # OBS
