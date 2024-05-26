@@ -105,7 +105,8 @@ function install_omf() {
     sleep 2s
     curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install >install
     echo -e "Curl oh my fish installation done!"
-    ( fish install --path=~/.local/share/omf --config=~/.config/omf ) & wait $!
+    (fish install --path=~/.local/share/omf --config=~/.config/omf) &
+    wait $!
     echo -e "\n👌 You can configure your shell theme with https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#agnoster"
     echo -e "It's super easy to use it!"
 }
@@ -115,7 +116,7 @@ function install_warp() {
     echo -e "Installing warp 🪄"
     sleep 2s
     sudo apt-get install wget gpg
-    wget -qO- https://releases.warp.dev/linux/keys/warp.asc | gpg --dearmor > warpdotdev.gpg
+    wget -qO- https://releases.warp.dev/linux/keys/warp.asc | gpg --dearmor >warpdotdev.gpg
     sudo install -D -o root -g root -m 644 warpdotdev.gpg /etc/apt/keyrings/warpdotdev.gpg
     sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/warpdotdev.gpg] https://releases.warp.dev/linux/deb stable main" > /etc/apt/sources.list.d/warpdotdev.list'
     rm warpdotdev.gpg
@@ -141,7 +142,17 @@ function install_fish_terminal() {
     sleep 2s
     echo /usr/local/bin/fish | sudo tee -a /etc/shells
     echo -e "Please press ENTER, this is a bug that I haven't fixed 😕"
-    sudo chsh -s $(which fish) # To revert => chsh -s $(which bash)
+    echo $password | sudo chsh -s $(which fish) # To revert => chsh -s $(which bash)
+
+    # This is for prevent a premature exit
+    trap 'echo "Finished installing fish!"' EXIT
+    output=$(install_omf 2>&1)
+    if [[ $? -eq 0 ]]; then
+        echo "Installation successful!"
+    else
+        echo "Installation failed!"
+        echo "$output"
+    fi
 
     # Fish Node Version Manager
     echo -e "Installing Node Version Manager 🍃"
