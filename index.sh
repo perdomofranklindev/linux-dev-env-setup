@@ -25,7 +25,7 @@ default_tools
 source optional_tools.sh
 
 # Display the dialog checklist and capture the user's selections
-selection=$(dialog --checklist "Choose toppings:" 30 80 13 \
+selection=$(dialog --checklist "Choose tools:" 30 80 13 \
   1 "Insomnium 🌑" on \
   2 "Onlyoffice 📃" on \
   3 "Docker 🐳" on \
