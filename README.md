@@ -49,6 +49,23 @@ Change your theme flavour [here](https://github.com/oh-my-fish/oh-my-fish/blob/m
 
 You're wondering why the command lines above aren't added on the fish terminal installation? Well, the second command line causes the script to exit prematurely, until now, I haven't found a way to prevent that.
 
+## Dark mode issues
+
+If you're facing some kind of issue with the dark mode, it is likely that is a driver issue, the NVIDIA drivers can sometimes have compatibility issues with specific desktop environment features.
+
+```bash
+sudo apt-get remove --purge 'nvidia-.*'
+sudo apt-get autoremove
+```
+
+```bash
+sudo apt-get install xserver-xorg-video-nouveau
+```
+
+```bash
+sudo reboot
+```
+
 ## Tested Linux Distributions
 - Ubuntu 24.04
 
