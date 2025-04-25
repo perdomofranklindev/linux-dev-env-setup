@@ -67,7 +67,7 @@ sudo reboot
 ```
 
 ## Tested Linux Distributions
-- Ubuntu 24.04
+- Ubuntu 24.04.2
 
 ## Credits
 Author: [Franklin Perdomo](https://github.com/perdomofranklindev)
