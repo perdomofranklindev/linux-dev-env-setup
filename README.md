@@ -1,6 +1,7 @@
 # Linux Development Environment Setup
 
 A script to configure a basic development environment on linux.
+
 ![Screenshot 2024-05-26 105329](https://github.com/perdomofranklindev/linux-dev-env-setup/assets/92344582/ebb200db-e20e-4c60-a1ce-0550def3047c)
 
 ## How to use
