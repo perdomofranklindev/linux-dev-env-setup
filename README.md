@@ -71,3 +71,4 @@ sudo reboot
 
 ## Tested Linux Distributions
 - Ubuntu 24.04.2 LTS
+- Ubuntu 25.04
