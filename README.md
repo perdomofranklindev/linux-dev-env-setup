@@ -18,20 +18,31 @@ A script to configure a basic development environment on linux.
 
 ## Optional tools
 
-1. [Insomnium 🌑](https://github.com/ArchGPT/insomnium)
-2. [Onlyoffice 📃](https://www.onlyoffice.com/)
-3. [Docker 🐳](https://www.docker.com/)
-4. [Google Chrome  🔎](https://www.google.com/intl/es/chrome/?brand=YTUH&gclid=Cj0KCQjw_7KXBhCoARIsAPdPTfgwWCrhGi51XzOTteYA2WEGwQKSe44Qd1Xd0TwE4EKAQ7ZmZ1WUiZ4aAmx_EALw_wcB&gclsrc=aw.ds)
-5. [Visual Studio Code 💻](https://code.visualstudio.com/)
-6. [Android Studio 📱](https://developer.android.com/studio?hl=es-419&gclid=Cj0KCQjw_7KXBhCoARIsAPdPTfjn_-ZwRMmDmv-MpvEYjZ5YkOECYQuR2JBV-MRVr0QPKTkLzxffGLEaAoUeEALw_wcB&gclsrc=aw.ds)
-7. [Spotify 🎧](https://www.spotify.com/)
-8. [Slack 🎙](https://slack.com/)
-9. [Discord 💬](https://discord.com/)
-10. [Warp 🪄](https://www.warp.dev/)
-11. Node Version Manager 🔰
-12. [Fish Terminal 🐟](https://fishshell.com/)
-13. [OBS 📹](https://obsproject.com/es)
-14. [PgAdmin 📊](https://www.pgadmin.org/download/)
+1. [Visual Studio Code 💻](https://code.visualstudio.com/)
+2. [Cursor](https://cursor.com/)
+3. [Windsurf](https://windsurf.com/)
+4. [Antigravity](https://antigravity.google/)
+5. [Insomnium 🌑](https://github.com/ArchGPT/insomnium)
+6. [opencode 💻](https://opencode.ai/)
+7. [Docker 🐳](https://www.docker.com/)
+8. [PgAdmin 📊](https://www.pgadmin.org/download/)
+9. [MySQL Workbench 🗄️](https://www.mysql.com/products/workbench/)
+10. [Google Chrome 🔎](https://www.google.com/intl/es/chrome/)
+11. [Brave Browser 🌐](https://brave.com/)
+12. [Tor Browser 🌐](https://www.torproject.org/)
+13. [Slack 🎙](https://slack.com/)
+14. [Discord 💬](https://discord.com/)
+15. [Spotify 🎧](https://www.spotify.com/)
+16. [OBS 📹](https://obsproject.com/es)
+17. [Onlyoffice 📃](https://www.onlyoffice.com/)
+18. [Obsidian 📝](https://obsidian.md/)
+19. [Pinta 🎨](https://www.pinta-project.com/)
+20. [Excalidraw 🎨](https://excalidraw.com/)
+21. [tldraw 🎨](https://www.tldraw.com/)
+22. [Warp 🪄](https://www.warp.dev/)
+23. [Fish Terminal 🐟](https://fishshell.com/)
+24. Node Version Manager 🔰
+25. [Android Studio 📱](https://developer.android.com/studio)
 
 ## Fish terminal extra options
 

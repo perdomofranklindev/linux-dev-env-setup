@@ -149,3 +149,111 @@ function install_pgadmin() {
     sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
     yes | sudo apt install pgadmin4
 }
+
+# Cursor
+function install_cursor() {
+    echo -e "Installing Cursor..."
+    sleep 2s
+    wget -O cursor.deb "https://downloader.cursor.sh/linux/deb/x64"
+    sudo apt install ./cursor.deb -y
+    rm cursor.deb
+}
+
+# Windsurf
+function install_windsurf() {
+    echo -e "Installing Windsurf..."
+    sleep 2s
+    curl -fsSL "https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/windsurf.gpg" | sudo gpg --dearmor -o /usr/share/keyrings/windsurf-stable-archive-keyring.gpg
+    echo "deb [signed-by=/usr/share/keyrings/windsurf-stable-archive-keyring.gpg arch=amd64] https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/apt stable main" | sudo tee /etc/apt/sources.list.d/windsurf.list > /dev/null
+    sudo apt-get update
+    sudo apt-get install windsurf -y
+}
+
+# MySQL Workbench
+function install_mysqlworkbench() {
+    echo -e "Installing MySQL Workbench 🗄️"
+    sleep 2s
+    sudo snap install mysql-workbench-community
+}
+
+# Brave Browser
+function install_brave() {
+    echo -e "Installing Brave Browser 🌐"
+    sleep 2s
+    sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+    echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+    sudo apt update
+    sudo apt install brave-browser -y
+}
+
+# Tor Browser
+function install_torbrowser() {
+    echo -e "Installing Tor Browser 🌐"
+    sleep 2s
+    sudo apt install torbrowser-launcher -y
+}
+
+# opencode
+function install_opencode() {
+    echo -e "Installing opencode..."
+    sleep 2s
+    curl -fsSL https://opencode.ai/install | bash
+}
+
+# Obsidian
+function install_obsidian() {
+    echo -e "Installing Obsidian 📝"
+    sleep 2s
+    sudo snap install obsidian
+}
+
+# Pinta
+function install_pinta() {
+    echo -e "Installing Pinta 🎨"
+    sleep 2s
+    sudo apt install pinta -y
+}
+
+# Excalidraw (PWA)
+function install_excalidraw() {
+    echo -e "Installing Excalidraw 🎨"
+    sleep 2s
+    mkdir -p ~/.local/share/applications
+    cat > ~/.local/share/applications/excalidraw.desktop << EOF
+[Desktop Entry]
+Name=Excalidraw
+Comment=Virtual whiteboard for sketching
+Exec=xdg-open https://excalidraw.com
+Icon=excalidraw
+Type=Application
+Categories=Graphics;
+Terminal=false
+EOF
+}
+
+# tldraw (PWA)
+function install_tldraw() {
+    echo -e "Installing tldraw 🎨"
+    sleep 2s
+    mkdir -p ~/.local/share/applications
+    cat > ~/.local/share/applications/tldraw.desktop << EOF
+[Desktop Entry]
+Name=tldraw
+Comment=Collaborative digital whiteboard
+Exec=xdg-open https://www.tldraw.com
+Icon=tldraw
+Type=Application
+Categories=Graphics;
+Terminal=false
+EOF
+}
+
+# Antigravity (Google)
+function install_antigravity() {
+    echo -e "Installing Google Antigravity..."
+    sleep 2s
+    curl -fsSL https://antigravity-debian.storage.googleapis.com/antigravity.gpg | sudo gpg --dearmor -o /usr/share/keyrings/antigravity.gpg
+    echo "deb [signed-by=/usr/share/keyrings/antigravity.gpg arch=amd64] https://antigravity-debian.storage.googleapis.com stable main" | sudo tee /etc/apt/sources.list.d/antigravity.list > /dev/null
+    sudo apt update
+    sudo apt install antigravity -y
+}

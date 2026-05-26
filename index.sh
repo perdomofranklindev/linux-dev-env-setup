@@ -24,48 +24,61 @@ default_tools
 # Optional tools
 source optional_tools.sh
 
-# Display the dialog checklist and capture the user's selections
-selection=$(dialog --checklist "Choose tools:" 30 80 13 \
-  1 "Insomnium 🌑" on \
-  2 "Onlyoffice 📃" on \
-  3 "Docker 🐳" on \
-  4 "Google Chrome 🔎" on \
-  5 "Visual Studio Code 💻" on \
-  6 "Android Studio 📱" on \
-  7 "Spotify 🎧" on \
-  8 "Slack 🎙" on \
-  9 "Discord 💬" on \
-  10 "Warp 🪄" on \
-  11 "Node Version Manager 🔰" on \
-  12 "Fish Terminal 🐟" on \
-  13 "OBS 📹" on \
-  14 "PgAdmin 📊" on 2>&1 >/dev/tty)
+selection=$(dialog --checklist "Choose tools:" 30 80 25 \
+  1  "💻 Visual Studio Code" on \
+  2  "💻 Cursor" on \
+  3  "💻 Windsurf" on \
+  4  "💻 Antigravity" on \
+  5  "💻 Insomnium" on \
+  6  "💻 opencode" on \
+  7  "🐳 Docker" on \
+  8  "🗄️ PgAdmin" on \
+  9  "🗄️ MySQL Workbench" on \
+  10 "🌐 Google Chrome" on \
+  11 "🌐 Brave Browser" on \
+  12 "🌐 Tor Browser" on \
+  13 "💬 Slack" on \
+  14 "💬 Discord" on \
+  15 "🎧 Spotify" on \
+  16 "📹 OBS" on \
+  17 "📄 Onlyoffice" on \
+  18 "📝 Obsidian" on \
+  19 "🎨 Pinta" on \
+  20 "🎨 Excalidraw" on \
+  21 "🎨 tldraw" on \
+  22 "🪄 Warp" on \
+  23 "🐟 Fish Terminal" on \
+  24 "🔰 Node Version Manager" on \
+  25 "📱 Android Studio" on 2>&1 >/dev/tty)
 
-# Check if the user made a selection
-if [[ -z "$selection" ]]; then
-  echo "No topping selected."
-else
-  # Remove leading/trailing spaces and split the selections into an array
-  selections=($selection)
-
-  # Loop through each selection and use a case statement to execute different commands
-  for sel in "${selections[@]}"; do
+if [[ -n "$selection" ]]; then
+  for sel in $selection; do
     case $sel in
-    1) install_insomnium ;;
-    2) install_onlyoffice ;;
-    3) install_docker ;;
-    4) install_chrome ;;
-    5) install_visualstudio ;;
-    6) install_android_studio ;;
-    7) install_spotify ;;
-    8) install_slack ;;
-    9) install_discord ;;
-    10) install_warp ;;
-    11) install_nvm ;;
-    12) install_fish_terminal ;;
-    13) install_obs ;;
-    14) install_pgadmin ;;
-    *) echo "Unknown selection" ;;
+      1) install_visualstudio ;;
+      2) install_cursor ;;
+      3) install_windsurf ;;
+      4) install_antigravity ;;
+      5) install_insomnium ;;
+      6) install_opencode ;;
+      7) install_docker ;;
+      8) install_pgadmin ;;
+      9) install_mysqlworkbench ;;
+      10) install_chrome ;;
+      11) install_brave ;;
+      12) install_torbrowser ;;
+      13) install_slack ;;
+      14) install_discord ;;
+      15) install_spotify ;;
+      16) install_obs ;;
+      17) install_onlyoffice ;;
+      18) install_obsidian ;;
+      19) install_pinta ;;
+      20) install_excalidraw ;;
+      21) install_tldraw ;;
+      22) install_warp ;;
+      23) install_fish_terminal ;;
+      24) install_nvm ;;
+      25) install_android_studio ;;
     esac
   done
 fi
