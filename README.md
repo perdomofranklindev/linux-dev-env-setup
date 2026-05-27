@@ -37,12 +37,10 @@ A script to configure a basic development environment on linux.
 17. [Onlyoffice 📃](https://www.onlyoffice.com/)
 18. [Obsidian 📝](https://obsidian.md/)
 19. [Pinta 🎨](https://www.pinta-project.com/)
-20. [Excalidraw 🎨](https://excalidraw.com/)
-21. [tldraw 🎨](https://www.tldraw.com/)
-22. [Warp 🪄](https://www.warp.dev/)
-23. [Fish Terminal 🐟](https://fishshell.com/)
-24. Node Version Manager 🔰
-25. [Android Studio 📱](https://developer.android.com/studio)
+20. [Warp 🪄](https://www.warp.dev/)
+21. [Fish Terminal 🐟](https://fishshell.com/)
+22. Node Version Manager 🔰
+23. [Android Studio 📱](https://developer.android.com/studio)
 
 ## Fish terminal extra options
 

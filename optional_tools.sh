@@ -57,10 +57,11 @@ function install_docker_compose() {
 function install_chrome() {
     echo -e "🔎 Installing Google Chrome..."
     sleep 2s
-    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add
-    echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+    sudo mkdir -p /etc/apt/keyrings
+    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor --yes -o /etc/apt/keyrings/google-chrome.gpg
+    echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
     sudo apt-get update
-    sudo apt-get install google-chrome-stable
+    sudo apt-get install google-chrome-stable -y
 }
 
 # Visual Studio Code
@@ -108,7 +109,8 @@ function install_warp() {
     sudo install -D -o root -g root -m 644 warpdotdev.gpg /etc/apt/keyrings/warpdotdev.gpg
     sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/warpdotdev.gpg] https://releases.warp.dev/linux/deb stable main" > /etc/apt/sources.list.d/warpdotdev.list'
     rm warpdotdev.gpg
-    sudo apt update && sudo apt install warp-terminal
+    sudo apt update || true
+    sudo apt install warp-terminal -y
 }
 
 function install_nvm() {
@@ -154,7 +156,7 @@ function install_pgadmin() {
 function install_cursor() {
     echo -e "Installing Cursor..."
     sleep 2s
-    wget -O cursor.deb "https://downloader.cursor.sh/linux/deb/x64"
+    wget -O cursor.deb "https://api2.cursor.sh/updates/download/golden/linux-x64-deb/cursor/3.5"
     sudo apt install ./cursor.deb -y
     rm cursor.deb
 }
@@ -211,49 +213,18 @@ function install_obsidian() {
 function install_pinta() {
     echo -e "Installing Pinta 🎨"
     sleep 2s
-    sudo apt install pinta -y
+    sudo snap install pinta
 }
 
-# Excalidraw (PWA)
-function install_excalidraw() {
-    echo -e "Installing Excalidraw 🎨"
-    sleep 2s
-    mkdir -p ~/.local/share/applications
-    cat > ~/.local/share/applications/excalidraw.desktop << EOF
-[Desktop Entry]
-Name=Excalidraw
-Comment=Virtual whiteboard for sketching
-Exec=xdg-open https://excalidraw.com
-Icon=excalidraw
-Type=Application
-Categories=Graphics;
-Terminal=false
-EOF
-}
 
-# tldraw (PWA)
-function install_tldraw() {
-    echo -e "Installing tldraw 🎨"
-    sleep 2s
-    mkdir -p ~/.local/share/applications
-    cat > ~/.local/share/applications/tldraw.desktop << EOF
-[Desktop Entry]
-Name=tldraw
-Comment=Collaborative digital whiteboard
-Exec=xdg-open https://www.tldraw.com
-Icon=tldraw
-Type=Application
-Categories=Graphics;
-Terminal=false
-EOF
-}
 
 # Antigravity (Google)
 function install_antigravity() {
     echo -e "Installing Google Antigravity..."
     sleep 2s
-    curl -fsSL https://antigravity-debian.storage.googleapis.com/antigravity.gpg | sudo gpg --dearmor -o /usr/share/keyrings/antigravity.gpg
-    echo "deb [signed-by=/usr/share/keyrings/antigravity.gpg arch=amd64] https://antigravity-debian.storage.googleapis.com stable main" | sudo tee /etc/apt/sources.list.d/antigravity.list > /dev/null
+    sudo mkdir -p /etc/apt/keyrings
+    curl -fsSL https://us-central1-apt.pkg.dev/doc/repo-signing-key.gpg | sudo gpg --dearmor --yes -o /etc/apt/keyrings/antigravity-repo-key.gpg
+    echo "deb [signed-by=/etc/apt/keyrings/antigravity-repo-key.gpg] https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/ antigravity-debian main" | sudo tee /etc/apt/sources.list.d/antigravity.list > /dev/null
     sudo apt update
     sudo apt install antigravity -y
 }

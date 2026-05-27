@@ -43,13 +43,11 @@ selection=$(dialog --checklist "Choose tools:" 30 80 25 \
   16 "📹 OBS" on \
   17 "📄 Onlyoffice" on \
   18 "📝 Obsidian" on \
-  19 "🎨 Pinta" on \
-  20 "🎨 Excalidraw" on \
-  21 "🎨 tldraw" on \
-  22 "🪄 Warp" on \
-  23 "🐟 Fish Terminal" on \
-  24 "🔰 Node Version Manager" on \
-  25 "📱 Android Studio" on 2>&1 >/dev/tty)
+   19 "🎨 Pinta" on \
+   20 "🪄 Warp" on \
+   21 "🐟 Fish Terminal" on \
+   22 "🔰 Node Version Manager" on \
+   23 "📱 Android Studio" on 2>&1 >/dev/tty)
 
 if [[ -n "$selection" ]]; then
   for sel in $selection; do
@@ -72,13 +70,11 @@ if [[ -n "$selection" ]]; then
       16) install_obs ;;
       17) install_onlyoffice ;;
       18) install_obsidian ;;
-      19) install_pinta ;;
-      20) install_excalidraw ;;
-      21) install_tldraw ;;
-      22) install_warp ;;
-      23) install_fish_terminal ;;
-      24) install_nvm ;;
-      25) install_android_studio ;;
+       19) install_pinta ;;
+       20) install_warp ;;
+       21) install_fish_terminal ;;
+       22) install_nvm ;;
+       23) install_android_studio ;;
     esac
   done
 fi
